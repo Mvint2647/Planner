@@ -16,9 +16,9 @@ body {
   .jumbotron {
     text-align: center;
     background-color: transparent;
-    color: black;
+    color: rgba(1, 16, 4, 0.612);
     border-radius: 0;
-    border-bottom: 10px solid black;
+    border-bottom: 10px solid rgba(1, 16, 4, 0.612);
   }
   
   .description {
@@ -33,27 +33,27 @@ body {
   .row {
     white-space: pre-wrap;
     height: 80px;
-    border-top: 1px solid white;
+    border-top: 3px solid white;
   }
   
   .hour {
     background-color: #ffffff;
     color: #000000;
-    border-top: 1px dashed #000000;
+    border-top: 1px dashed #bdffd0;
   }
   
   .past {
-    background-color: #d3d3d3;
+    background-color: #727272;
     color: white;
   }
   
   .present {
-    background-color: #ff6961;
+    background-color: #fea680;
     color: white;
   }
   
   .future {
-    background-color: #77dd77;
+    background-color: #e3e3e3;
     color: white;
   }
   
@@ -61,7 +61,7 @@ body {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: #06aed5;
+    background-color: #bdffd0;
     color: white;
   }
   
@@ -70,3 +70,8 @@ body {
     transition: all 0.3s ease-in-out;
   }
   
+  .footer {
+    white-space: pre-wrap;
+    height: 80px;
+    border-top: 3px solid white;
+  }
