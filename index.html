@@ -14,21 +14,15 @@
   </head>
 
  <body>
-  <h1>
-   
-  </h1>
- <script>
-
-var today = new Date();
-
-var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-
-var dateTime = date+' '+time;
-
- </script>
-
+  <script>
+    var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today.getFullYear();
+  
+  today = mm + '/' + dd + '/' + yyyy;
+  document.write(today);
+  </script>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
@@ -117,7 +111,7 @@ var dateTime = date+' '+time;
    </div>
  </div>
 
-    <script src="/assets/script.js"/>
+    <script src="./assets/script.js"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"/> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"/> 
     
