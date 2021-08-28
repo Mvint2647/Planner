@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
-integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="/Planner/assets/style.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
     
     <title>Work Day Scheduler</title>
 
   </head>
 
-  <body>
+ <body>
+
+
+  <p id="demo"></p>
+  
+  <script> 
+  const d = new Date(2018, 11, 24, 10, 33);
+  document.getElementById("demo").innerHTML = d;
+
+  </script>
+
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
@@ -74,7 +83,9 @@ integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28an
             <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
                 3pm
             </div>
-            <textarea class="future col-xs-9 col-sm-9 col-md-9 col-lg-9 description" data-hour='15' id="div3"></textarea>
+            <textarea class="future col-xs-9 col-sm-9 col-md-9 col-lg-9 description"
+            data-hour='15' id="div3">
+            </textarea>
             <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn3"></button>
 
 </div>
@@ -82,7 +93,9 @@ integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28an
             <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
                 4pm
             </div>
-            <textarea class="future col-xs-9 col-sm-9 col-md-9 col-lg-9 description" data-hour='16' id="div4"></textarea>
+            <textarea class="future col-xs-9 col-sm-9 col-md-9 col-lg-9 description" 
+            data-hour='16'
+            id="div4"></textarea>
             <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn4"></button>
 
 </div>
@@ -90,17 +103,16 @@ integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28an
             <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
                 5pm
             </div>
-            <textarea class="future col-xs-9 col-sm-9 col-md-9 col-lg-9 description" data-hour='17' id="div5"></textarea>
+            <textarea class="future col-xs-9 col-sm-9 col-md-9 col-lg-9 description"
+            data-hour='17' id="div5"></textarea>
             <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn5"></button>
 
         </div>
      </div>
    </div>
  </div>
-    <footer><textarea>    
-        </textarea> </footer>
 
-
+    <script src="./assets/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   </body>
