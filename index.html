@@ -14,15 +14,20 @@
   </head>
 
  <body>
+  <h1>
+   
+  </h1>
+ <script>
 
+var today = new Date();
 
-  <p id="demo"></p>
-  
-  <script> 
-  const d = new Date(2018, 11, 24, 10, 33);
-  document.getElementById("demo").innerHTML = d;
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 
-  </script>
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+var dateTime = date+' '+time;
+
+ </script>
 
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
@@ -32,14 +37,14 @@
     <div class="container">
       <!-- Timeblocks go here -->
 <div class="container main">
-<div class='row time-block'>
+<div id="hour-9" class='row time-block'>
 <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
                 9am
 </div>
             <textarea class="future col-xs-9 col-sm-9 col-md-9 col-lg-9 description" data-hour='9' id='div9'></textarea>
             <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn9"></button>
 </div>
-<div class='row time-block'>
+<div id="hour-10" class='row time-block'>
             <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
                 10am
             </div>
@@ -47,7 +52,7 @@
             <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn10"></button>
 
 </div>
-<div class='row time-block'>
+<div id="hour-11" class='row time-block'>
             <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
                 11am
             </div>
@@ -55,7 +60,7 @@
             <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn11"></button>
 
 </div>
-<div class='row time-block'>
+<div id="hour-12" class='row time-block'>
             <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
                 12am
             </div>
@@ -63,7 +68,7 @@
             <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn12"></button>
 
 </div>
-<div class='row time-block'>
+<div id="hour-1" class='row time-block'>
             <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
                 1pm
             </div>
@@ -71,7 +76,7 @@
             <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn1"></button>
 
 </div>
-<div class='row time-block'>
+<div id="hour-2" class='row time-block'>
             <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
                 2pm
             </div>
@@ -79,7 +84,7 @@
             <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn2"></button>
 
 </div>
-<div class='row time-block'>
+<div id="hour-3" class='row time-block'>
             <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
                 3pm
             </div>
@@ -89,7 +94,7 @@
             <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn3"></button>
 
 </div>
-<div class='row time-block'>
+<div id="hour-4" class='row time-block'>
             <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
                 4pm
             </div>
@@ -99,7 +104,7 @@
             <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 fas fa-save btn-block saveBtn" id="btn4"></button>
 
 </div>
-<div class='row time-block'>
+<div id="hour-5" class='row time-block'>
             <div class="hour col-xs-2 col-sm-2 col-md-2 col-lg-2">
                 5pm
             </div>
@@ -112,8 +117,9 @@
    </div>
  </div>
 
-    <script src="./assets/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="/assets/script.js"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"/> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"/> 
+    
   </body>
 </html>

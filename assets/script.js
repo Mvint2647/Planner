@@ -1,18 +1,13 @@
-$(document).ready(function() {
 
- $timeEl =  ('<p>');
- $dayEl =  ('<p>');
+ function clock() {
 
-     let box1 =  ('#div1');  $button1 =  ('#btn1'); box1.val(localStorage.getItem('text1'));
-     let box2 =  ('#div2');  $button2 =  ('#btn2'); box2.val(localStorage.getItem('text2'));
-     let box3 =  ('#div3');  $button3 =  ('#btn3'); box3.val(localStorage.getItem('text3'));
-     let box5 =  ('#div5');  $button5 =  ('#btn5');   box5.val(localStorage.getItem('text5'));
-     let box12 =  ('#div12');  $button12 =  ('#btn12'); box11.val(localStorage.getItem('text11'));
-     let box11 =  ('#div11');  $button11 =  ('#btn11'); box11.val(localStorage.getItem('text11'));
-     let box10 =  ('#div10');  $button10 =  ('#btn10'); box10.val(localStorage.getItem('text10'));
-     let box9 =   ('#div9');  $button9 =  ('#btn9'); box9.val(localStorage.getItem('text9'));
+    dayEl.text(moment().format('LL'));
+    timeEl.text(moment().format('hh:mm:ssA'));
+    $('.jumbotron').append(dayEl);
+    $('.jumbotron').append(timeEl);
 
-    function checkingTime() {
+}
+    (function checkingTime() {
   
         if (parseInt(box12.attr('data-hour')) > timeNow) {
             box12.removeClass('past present future');
@@ -147,4 +142,19 @@ $(document).ready(function() {
 
     
   checkingTime();
+    
+  function checkState() {
+    $(".hour").each(function(){
+        var hour = this.id.split("hour")[1];
+        //console.log(moment().format("H"))
+        console.log(moment(hour,"H").format("ha"))
+        if (moment(hour, "ha").isBefore(now, "h")) {
+            $(this).siblings(0).addClass("past")
+        } else if (moment(hour, "ha").isSame(now, "h")) {
+            $(this).siblings(0).addClass("present")
+        } else {
+            $(this).siblings(0).addClass("future")
+        }
+    })
 });
+ 
